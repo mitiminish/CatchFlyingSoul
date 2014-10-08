@@ -12,7 +12,6 @@ void draw_ch(){
 	}
 
 	DrawBox((int)ch.x, (int)ch.y, (int)(ch.x + ch.sizeX), (int)(ch.y + ch.sizeY), 0xffffff, TRUE);
-	printfDx("jampFlag=%d",ch.jampFlag);
 }
 
 void draw_bar(){
@@ -48,6 +47,7 @@ void draw_board(){
 
 void draw_develop(){
 	printfDx("\nch.vy=%f",ch.vy);	
+	printfDx("\nch.y=%f", ch.y);
 }
 
 
@@ -55,6 +55,7 @@ void draw_develop(){
 void draw_main(){
 	SetDrawArea(FIELD_X,FIELD_Y,FIELD_MAX_X,FIELD_MAX_Y);
 	DrawBox(FIELD_X,FIELD_Y,FIELD_MAX_X,FIELD_MAX_Y,0x000000,TRUE);
+	draw_develop();
 	draw_ch();
 	draw_soul();
 	draw_bar();

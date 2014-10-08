@@ -43,19 +43,18 @@ void bar_enter(){
 			bar[k].x=100;
 			bar[k].y=270;
 			bar[k].ptn=5;
-			bar[k].ang=0;
+			bar[k].ang=PI/6.0;
 			bar[k].flag=1;
 			bar[k].length=100;
 		}
 	}
-	
+	/*
 	if(game_cnt%100==49){
 		if((k=getEmptyBar())!=-1){
 			bar[k].x=30;
 			bar[k].y=-20;
 			bar[k].length=100;
 			bar[k].flag=1;
-			
 			bar[k].ptn=1;
 		}
 	}
@@ -79,7 +78,7 @@ void bar_enter(){
 			bar[k].ptn=3;
 		}
 	}
-	/**/
+	//*/
 }
 void bar_calc(){
 	for(int i=0;i<BAR_MAX;i++){
